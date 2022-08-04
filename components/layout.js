@@ -1,7 +1,8 @@
 import Head from "next/head";
 import Navbar from "./navbar";
 
-export const siteTitle = "JIBANNAGAR DEGREE COLLEGE";
+const siteTitle = "JDC";
+export const setTitle = (title) => `${siteTitle} || ${title}`;
 
 const style = {
   wrapper: "flex flex-[1] flex-col bg-slate-100 min-w-screen min-h-screen",
