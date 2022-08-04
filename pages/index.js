@@ -37,8 +37,8 @@ export default function Home() {
 
       {/* END SLIDE SHOW */}
       {/* START SECTION  */}
-      <section className="min-h-screen max-w-screen bg-[url('/images/image-1.jpg')] bg-teal-900 flex p-9 sm:flex-wrap flex-col-reverse md:flex-row justify-items-center gap-6">
-        <div className="md:text-xl px-7 md:px-40 flex flex-col justify-center basis-[1/2] w-full md:w-1/2 text-sm text-slate-200 bg-primary sm:bg-transparent sm:text-slate-800 p-3">
+      <section className="min-h-screen max-w-screen bg-[url('/images/image-1.jpg')] bg-teal-900 flex py-32 sm:p-9 sm:flex-wrap flex-col-reverse md:flex-row justify-items-center gap-6">
+        <div className="md:text-xl px-7 md:px-40 flex flex-col justify-center basis-[1/2] w-full sm:w-1/2 text-sm text-slate-200 bg-primary sm:bg-transparent sm:text-slate-800 p-3">
           জীবননগর ডিগ্রি কলেজ জীবননগর উপজেলার একটি প্রাচীন শিক্ষা প্রতিষ্ঠান। এ
           প্রতিষ্ঠানের সম্মানীত শিক্ষকগণ অত্যন্ত দক্ষ। তারা শিক্ষার্থীদের
           মানুষের মত মানুষ হিসেবে গড়ে ওঠার জন্য সুন্দর গাইড লাইন প্রদান করেন।
@@ -51,7 +51,7 @@ export default function Home() {
           উদ্যোগ গ্রহণ করেছে। এ কারণে আমি আনন্দিত এবং একইসাথে গর্বিত।
         </div>
         <div className="flex flex-col justify-center basis-[1/2]">
-          <div className="bg-slate-50 min-w-[400px] h-[300px] rounded-md relative flex flex-col opacity-95 animate-fade">
+          <div className="bg-slate-50 h-[300px] rounded-md relative flex flex-col opacity-95 animate-fade">
             <div className="w-32 h-32 rounded-full flex justify-center mx-auto -translate-y-1/2 absolute right-1/2 left-1/2 -translate-x-1/2 z-50">
               <img
                 src="/images/principal.jpg"
@@ -59,7 +59,7 @@ export default function Home() {
                 className="h-32 w-32 rounded-full"
               />
             </div>
-            <div className="mt-[90px] px-6 flex justify-center flex-col items-center">
+            <div className="mt-[90px] sm:p-6 flex justify-center flex-col items-center">
               <h1>MD. JASIM UDDIN AHMED</h1>
               <h1>PRINCIPAL (ACTING)</h1>
               <h1>JIBANNAGAR DEGREE COLLEGE</h1>
