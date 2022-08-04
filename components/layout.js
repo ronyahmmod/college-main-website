@@ -16,6 +16,7 @@ export default function Layout({ children }) {
         <meta name="title" content="Jibannagar Degree College" />
         <meta name="description" content="Welcome to JDC" />
         <title>{siteTitle}</title>
+        <link rel="icon" href="/college-logo.ico" />
       </Head>
       <header>
         <Navbar />
