@@ -14,9 +14,9 @@ const style = {
 export function SlideItem({ image, caption, slideNum, totlaSlide }) {
   return (
     <div className={style.slide}>
-      <div className="absolute text-slate-50 text-xl">
+      {/* <div className="absolute text-slate-50 text-xl">
         {slideNum} / {totlaSlide - 1}
-      </div>
+      </div> */}
       <img src={image} alt={`image-${slideNum}`} className={style.slideImage} />
       <div className="text-2xl absolute bottom-6 w-full text-center text-slate-50">
         {caption}
@@ -26,21 +26,28 @@ export function SlideItem({ image, caption, slideNum, totlaSlide }) {
 }
 
 export default function Slide({ slides }) {
-  const totlaSlide = slides.length;
+  const totalSlide = slides.length;
   const [currentSlide, setCurrentSlide] = useState(0);
   const [selectedSlide, setSelectedSlide] = useState(slides[0]);
 
+  const handleNextSlide = () => {
+    if (currentSlide >= totalSlide - 1) {
+      setCurrentSlide(0);
+    } else {
+      setCurrentSlide((currentSlide) => currentSlide + 1);
+    }
+  };
+
+  const handlePrevSlide = () => {
+    if (currentSlide <= 0) setCurrentSlide(totalSlide - 1);
+    else {
+      setCurrentSlide((currentSlide) => currentSlide - 1);
+    }
+  };
+
   useEffect(() => {
-    console.log("re-render");
-    const interval = setInterval(() => {
-      setCurrentSlide(++currentSlide);
-      setSelectedSlide(slides[currentSlide]);
-      if (currentSlide >= totlaSlide) setCurrentSlide(-1);
-    }, 3000);
-    return () => {
-      clearInterval(interval);
-    };
-  }, [currentSlide, selectedSlide, slides, totlaSlide]);
+    setSelectedSlide(slides[currentSlide]);
+  }, [currentSlide, selectedSlide, slides, totalSlide]);
   return (
     <div className={style.wrapper}>
       {/* SLIDE CONTAINER START */}
@@ -51,7 +58,7 @@ export default function Slide({ slides }) {
           image={selectedSlide.image}
           caption={selectedSlide.caption}
           slideNum={currentSlide}
-          totlaSlide={totlaSlide}
+          totlaSlide={totalSlide}
         />
       )}
 
@@ -59,10 +66,16 @@ export default function Slide({ slides }) {
 
       {/* NEXT/PREV ACTION BUTTONS */}
       <div>
-        <button className={style.actionButton}>
+        <button
+          className={style.actionButton}
+          onClick={() => handlePrevSlide()}
+        >
           <AiOutlineArrowLeft />
         </button>
-        <button className={style.actionButton + " " + "right-0"}>
+        <button
+          className={style.actionButton + " " + "right-0"}
+          onClick={() => handleNextSlide()}
+        >
           <AiOutlineArrowRight />
         </button>
       </div>

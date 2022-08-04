@@ -1,18 +1,17 @@
-import Image from "next/image";
 import { useEffect, useState } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 const style = {
   wrapper:
     "w-screen md:w-full h-[90px] bg-teal-500 flex items-center text-slate-100 fixed z-50",
-  logoBox: "flex items-center ml-3 gap-4 grow text-2xl uppercase",
+  logoBox: "flex items-center ml-3 gap-4 grow text-xl sm:text-[16px] uppercase",
   logo: "w-12 h-12 md:w-[48px] md: h-[48px] rounded-full cursor-pointer",
-  logoContainer: "w-12 h-12 md:w-[48px] md:h-[48px] rounded-full",
-  menu: "hidden items-center gap-2 mr-4 sm:flex",
+  logoContainer: "w-12 h-12 md:w-[48px] md:h-[48px] rounded-full md:text-md",
+  menu: "hidden items-center gap-2 mr-4 lg:flex lg:text-md md:gap-1",
   menuItem:
     "uppercase cursor-pointer hover:text-slate-200 tracking-[.1em] hover:bg-teal-700 p-2 rounded-lg transition ease-in duration-300 hover:ease-out",
   menuIcon: "text-slate-100 w-[32px] h-[32px] cursor-pointer",
   mobileMenuContainer:
-    "overflow-y-auto sm:hidden max-h-screen flex-col fixed top-0 right-0 bottom-0 max-w-[370px] w-[250px] bg-white z-auto align-center gap-4 px-2 py-3",
+    "overflow-y-auto max-h-screen flex-col fixed top-0 right-0 bottom-0 max-w-[370px] w-[250px] bg-white z-auto align-center gap-4 px-2 py-3",
   mobileMenu: "flex flex-grow flex-col align-center gap-4 py-3",
   mobileMenuItem:
     "uppercase text-center cursor-pointer hover:text-slate-200 tracking-[.1em] hover:bg-teal-700 p-2 rounded-lg transition ease-in duration-300 hover:ease-out text-teal-700",
@@ -75,7 +74,7 @@ export default function Navbar() {
 
       {/* MENU ICON */}
       <div
-        className="block sm:hidden mr-3 rounded-full bg-teal-700 hover:bg-teal-600 p-2"
+        className="block lg:hidden mr-3 rounded-full bg-teal-700 hover:bg-teal-600 p-2"
         onClick={() => setOpen(true)}
       >
         <AiOutlineMenu className={style.menuIcon} />
