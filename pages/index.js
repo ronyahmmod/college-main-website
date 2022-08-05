@@ -49,7 +49,7 @@ export default function Home() {
       {/* END SLIDE SHOW */}
       {/* START GB PRECIDENT SECTION  */}
       <section className="max-w-screen bg-[url('/images/image-2.jpg')] sm:mb-4 bg-teal-900 flex py-32 sm:py-48 sm:p-9 sm:flex-wrap flex-col-reverse sm:flex-row-reverse justify-items-center gap-6">
-        <div className="md:text-xl px-7 md:px-12 flex flex-col justify-center basis-[1/2] w-full sm:w-1/2 text-sm text-slate-200 bg-primary sm:bg-slate-200 sm:text-sky-900 p-3 ">
+        <div className="md:text-xl px-7 md:px-12 flex flex-col justify-center basis-[1/2] w-full sm:w-1/2 text-sm text-slate-200 bg-primary sm:bg-slate-200 sm:text-sky-900 rounded-lg p-3 ">
           জীবননগর ডিগ্রি কলেজ জীবননগর উপজেলার একটি প্রাচীন শিক্ষা প্রতিষ্ঠান।
           শিক্ষা প্রতিষ্ঠানটি উপজেলার প্রাণকেন্দ্রে অবস্থিত। কলেজটিতে বৃহৎ
           ক্যাম্পাস রয়েছে। কলেজটির চারিদিকে সবুজ গাছ থাকায় একটি নির্মল পরিবেশ
@@ -92,7 +92,7 @@ export default function Home() {
 
       {/* START SECTION  */}
       <section className="max-w-screen bg-[url('/images/image-1.jpg')] bg-teal-900 flex py-32 sm:py-48 sm:p-9 sm:flex-wrap flex-col-reverse md:flex-row justify-items-center gap-6">
-        <div className="md:text-xl px-7 md:px-12 flex flex-col justify-center basis-[1/2] w-full sm:w-1/2 text-sm text-slate-200 bg-primary sm:bg-transparent sm:text-slate-800 p-3">
+        <div className="md:text-xl px-7 md:px-12 flex flex-col justify-center basis-[1/2] w-full sm:w-1/2 text-sm text-slate-200 bg-primary sm:bg-slate-200 sm:text-sky-900 rounded-lg p-3">
           জীবননগর ডিগ্রি কলেজ জীবননগর উপজেলার একটি প্রাচীন শিক্ষা প্রতিষ্ঠান। এ
           প্রতিষ্ঠানের সম্মানীত শিক্ষকগণ অত্যন্ত দক্ষ। তারা শিক্ষার্থীদের
           মানুষের মত মানুষ হিসেবে গড়ে ওঠার জন্য সুন্দর গাইড লাইন প্রদান করেন।
