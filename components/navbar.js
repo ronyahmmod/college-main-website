@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import Link from "next/link";
 const style = {
   wrapper:
     "w-screen md:w-full h-[90px] bg-teal-500 flex items-center text-slate-100 fixed z-50",
@@ -53,20 +54,26 @@ export default function Navbar() {
       {/* START NAV MENU */}
       <div className={style.menu}>
         {[
-          "home",
-          "history",
-          "gb",
-          "notice",
-          "teachers/stuf",
-          "students services",
-          "teacher/stuf services",
-          "results",
-          "contact",
-        ].map((menu) => (
-          <div className={style.menuItem} key={menu}>
-            {menu}
-          </div>
-        ))}
+          ["home", "/"],
+          ["history", "history"],
+          ["gb", "gb"],
+          ["notice", "notice"],
+          ["students services", "https://app1.jibannagardegreecollege.com/"],
+          [
+            "teacher/stuf services",
+            "https://app2.jibnannagardegreecollege.com/",
+          ],
+          ["results", "results"],
+          ["contact", "contact"],
+        ].map(([menu, href], index) => {
+          return (
+            <div className={style.menuItem} key={index}>
+              <Link href={href}>
+                <a>{menu}</a>
+              </Link>
+            </div>
+          );
+        })}
       </div>
       {/* END NAV MENU */}
       {/* TODO: DROP DOWN MENU */}
@@ -97,18 +104,22 @@ export default function Navbar() {
         </div>
         <div className={style.mobileMenu}>
           {[
-            "home",
-            "history",
-            "gb",
-            "notice",
-            "teachers/stuf",
-            "students services",
-            "teacher/stuf services",
-            "results",
-            "contact",
-          ].map((menu) => (
-            <div className={style.mobileMenuItem} key={menu}>
-              {menu}
+            ["home", "/"],
+            ["history", "history"],
+            ["gb", "gb"],
+            ["notice", "notice"],
+            ["students services", "https://app1.jibannagardegreecollege.com/"],
+            [
+              "teacher/stuf services",
+              "https://app2.jibnannagardegreecollege.com/",
+            ],
+            ["results", "results"],
+            ["contact", "contact"],
+          ].map(([menu, href], index) => (
+            <div className={style.mobileMenuItem} key={index}>
+              <Link href={href}>
+                <a>{menu}</a>
+              </Link>
             </div>
           ))}
         </div>

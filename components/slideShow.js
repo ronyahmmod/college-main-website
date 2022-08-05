@@ -3,7 +3,7 @@ import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 
 const style = {
   wrapper:
-    "relative max-w-screen w-full max-h-screen sm:max-h-[600px] bg-slate-200 h-[500px] mx-auto mb-32",
+    "relative max-w-screen w-full max-h-screen sm:max-h-[600px] bg-slate-200 h-[500px] mx-auto",
   slide: "w-full h-full animate-fade",
   slideImage: "h-full w-full object-cover",
   actionButton:

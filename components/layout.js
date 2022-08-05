@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Footer from "./footer";
 import Navbar from "./navbar";
 
 const siteTitle = "JDC";
@@ -23,7 +24,9 @@ export default function Layout({ children }) {
       </header>
 
       <main className={style.main}>{children}</main>
-      <footer>{/* Footer is go here */}</footer>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }
