@@ -16,6 +16,8 @@ export default function Home() {
     <Layout>
       <Head>
         <title>{setTitle("Home")}</title>
+                         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1390370690959792"
+     crossorigin="anonymous"></script>
       </Head>
       {/* START SLIDE SHOW */}
       <SlideShow
